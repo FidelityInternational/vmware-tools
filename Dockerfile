@@ -1,6 +1,5 @@
 FROM vmware/powerclicore
 
-ENV YQ_VERSION="3.2.1"
-RUN curl -fL "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq && \
-    curl -fL "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq3 && \
+ENV YQ_VERSION="4.9.6"
+RUN curl -fL "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq && \
     chmod +x /usr/local/bin/*
